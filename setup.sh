@@ -130,3 +130,19 @@ apt-get install --yes git rpi-update
 
 SKIP_WARNING=1 rpi-update
 
+apt-get install nodejs npm
+sudo npm cache clean -f
+sudo npm install -g n
+sudo npm cache clean -f
+sudo npm install -g n
+npm install npm@latest -g
+npm install -g npm-check-updates
+
+curl -L https://github.com/fg2it/phantomjs-on-raspberry/releases/download/v2.1.1-wheezy-jessie/phantomjs_2.1.1_armhf.deb -o /tmp/phantomjs_2.1.1_armhf.deb
+sudo dpkg -i /tmp/phantomjs_2.1.1_armhf.deb
+
+cd /opt
+git clone https://github.com/akshayogra/apollo
+cd /opt/apollo
+npm update
+npm install
